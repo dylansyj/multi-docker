@@ -12,13 +12,13 @@ after_success:
   - docker build -t dylansyj/multi-nginx ./nginx
   - docker build -t dylansyj/multi-server ./server
   - docker build -t dylansyj/multi-worker ./worker
-  - docker build -t dylansyj/multi-client ./client
+  - docker build -t dylansyj/asd ./client
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
   - docker images
   - docker push dylansyj/multi-nginx
   - docker push dylansyj/multi-server
   - docker push dylansyj/multi-worker
-  - docker push dylansyj/multi-client
+  - docker push dylansyj/asd
 
 # deploy:
 #   provider: elasticbeanstalk
