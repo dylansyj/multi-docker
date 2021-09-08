@@ -14,7 +14,7 @@ after_success:
   - docker build -t dylansyj/multi-worker ./worker
   - docker build -t dylansyj/multi-client ./client
   - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_ID" --password-stdin
-  - docker ps -a
+  - docker images
   - docker push dylansyj/multi-nginx
   - docker push dylansyj/multi-server
   - docker push dylansyj/multi-worker
